@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace FlowControl;
+﻿namespace FlowControl;
 
 class Program
 {
@@ -15,10 +13,12 @@ class Program
     
     static void Main(string[] args)
     {
+        //Startup
         bool running = true;
         Cinema cinema = new Cinema();
         Greeting();
 
+        //Main loop
         do
         {
             Console.Write(">> ");

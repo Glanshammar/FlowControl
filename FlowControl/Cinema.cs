@@ -8,17 +8,20 @@ public class Cinema
         Console.WriteLine($"Your cost is {cost}kr");
     }
     
+    
     public void EnterCinemaGroup(Group group)
     {
         int totalCost = 0;
         List<Person> people = group.GetPeople();
         int peopleCount = people.Count;
 
+        int personNumber = 1;
         foreach (var person in people)
         {
             int cost = CalculateCost(person.GetAge());
-            Console.WriteLine($"The cost for a person aged {person.GetAge()} is {cost}kr");
+            Console.WriteLine($"The cost for person {personNumber}, aged {person.GetAge()} is {cost}kr");
             totalCost += cost;
+            personNumber++;
         }
 
         Console.WriteLine($"Total cost for the group of {peopleCount} people: {totalCost}kr");

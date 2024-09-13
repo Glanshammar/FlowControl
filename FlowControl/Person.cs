@@ -1,5 +1,4 @@
-﻿
-public class Group
+﻿public class Group
 {
     private static List<Person> people = new List<Person>();
 
