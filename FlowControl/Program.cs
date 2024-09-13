@@ -9,25 +9,35 @@ class Program
         Console.WriteLine("Hello, World!" +
                           "\nWhat do you want to do?" +
                           "\n0. Quit" +
-                          "\n1. Enter the movies." +
-                          "\n2. ??");
+                          "\n1. Enter the movies. (Single person)" +
+                          "\n2. Enter the movies. (Group)");
     }
     
     static void Main(string[] args)
     {
         bool running = true;
+        Cinema cinema = new Cinema();
         Greeting();
 
         do
         {
-            string input = Console.ReadLine()?.Trim().ToLower() ?? string.Empty;
+            Console.Write(">> ");
+            string input = Console.ReadLine()?.Trim() ?? string.Empty;
 
             switch (input)
             {
-                case "0":
+                case "0": //Quit the program.
                     running = false;
                     break;
-                default:
+                case "1": //For a single person.
+                    Person person = new Person();
+                    cinema.EnterCinema(person.GetAge());
+                    break;
+                case "2": //For a group of people.
+                    Group group = new Group();
+                    cinema.EnterCinemaGroup(group);
+                    break;
+                default: //For invalid input.
                     Console.WriteLine("Invalid input. Try again.");
                     break;
             }
