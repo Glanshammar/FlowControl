@@ -14,7 +14,7 @@ public class Split
             return;
         }
         
-        string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         if (words.Length >= 3)
         {

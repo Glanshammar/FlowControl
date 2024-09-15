@@ -8,7 +8,9 @@ class Program
                           "\nWhat do you want to do?" +
                           "\n0. Quit" +
                           "\n1. Enter the movies. (Single person)" +
-                          "\n2. Enter the movies. (Group)");
+                          "\n2. Enter the movies. (Group)" +
+                          "\n3. Print 10 times." +
+                          "\n4. Split sentence.");
     }
     
     static void Main(string[] args)
