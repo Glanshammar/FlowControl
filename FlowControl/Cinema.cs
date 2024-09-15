@@ -24,7 +24,7 @@ public class Cinema
             personNumber++;
         }
 
-        Console.WriteLine($"Total cost for the group of {peopleCount} people: {totalCost}kr");
+        Console.WriteLine($"Total cost for the group of {peopleCount} people is {totalCost}kr");
         people.Clear();
     }
 
