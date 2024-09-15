@@ -7,7 +7,13 @@ public class Split
         Console.WriteLine("\nSplits a sentence and shows the third word.");
         Console.Write("Write a sentence (at least 3 words): ");
         
-        string input = Console.ReadLine();
+        string input = Console.ReadLine() ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            Console.WriteLine("Input cannot be null. Please try again.");
+            return;
+        }
+        
         string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
         if (words.Length >= 3)
