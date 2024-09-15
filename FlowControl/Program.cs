@@ -34,8 +34,13 @@ class Program
                     cinema.EnterCinema(person.GetAge());
                     break;
                 case "2": //For a group of people.
-                    Group group = new Group();
-                    cinema.EnterCinemaGroup(group);
+                    cinema.EnterCinemaGroup(new Group());
+                    break;
+                case "3": //Print ten times
+                    TenTimes.Print();
+                    break;
+                case "4": //Split a string from input and print the third word
+                    Split.Input();
                     break;
                 default: //For invalid input.
                     Console.WriteLine("Invalid input. Try again.");
