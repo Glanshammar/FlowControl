@@ -4,8 +4,20 @@ public class TenTimes
 {
     public static void Print()
     {
-        Console.Write("What do you want to print? ");
-        string tenInput = Console.ReadLine()?.Trim() ?? string.Empty;
+        string tenInput;
+
+        while (true)
+        {
+            Console.Write("What do you want to print? ");
+            tenInput = Console.ReadLine()?.Trim() ?? string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(tenInput))
+            {
+                break;
+            }
+
+            Console.WriteLine("Input cannot be empty. Please try again.");
+        }
         
         for (int i = 1; i <= 10; i++)
         {
