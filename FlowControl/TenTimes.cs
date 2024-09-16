@@ -2,16 +2,17 @@
 
 public class TenTimes
 {
+    //Prints the user input 10 times using a for loop
     public static void Print()
     {
-        string tenInput;
+        string input = string.Empty;
 
         while (true)
         {
             Console.Write("What do you want to print? ");
-            tenInput = Console.ReadLine()?.Trim() ?? string.Empty;
+            input = Console.ReadLine()?.Trim() ?? string.Empty;
 
-            if (!string.IsNullOrWhiteSpace(tenInput))
+            if (!string.IsNullOrWhiteSpace(input))
             {
                 break;
             }
@@ -21,7 +22,7 @@ public class TenTimes
         
         for (int i = 1; i <= 10; i++)
         {
-            Console.Write($"{i}. {tenInput}");
+            Console.Write($"{i}. {input}");
             if (i < 10)
             {
                 Console.Write(", ");

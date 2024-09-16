@@ -2,6 +2,7 @@
 
 public class Split
 {
+    // Prompts the user for input, splits the sentence, and displays the third word.
     public static void Input()
     {
         Console.WriteLine("\nSplits a sentence and shows the third word.");
