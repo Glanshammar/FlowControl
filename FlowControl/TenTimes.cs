@@ -2,7 +2,7 @@
 
 public class TenTimes
 {
-    //Prints the user input 10 times using a for loop
+    // Prints the user input 10 times using a for loop
     public static void Print()
     {
         string input = string.Empty;

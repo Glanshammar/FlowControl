@@ -15,12 +15,12 @@ class Program
     
     static void Main(string[] args)
     {
-        //Startup
+        // Startup
         bool running = true;
         Cinema cinema = new Cinema();
         Greeting();
 
-        //Main loop
+        // Main loop
         do
         {
             Console.Write(">> ");
@@ -28,23 +28,23 @@ class Program
 
             switch (input)
             {
-                case "0": //Quit the program.
+                case "0": // Quit the program.
                     running = false;
                     break;
-                case "1": //For a single person.
+                case "1": // For a single person.
                     Person person = new Person();
                     cinema.EnterCinema(person.GetAge());
                     break;
-                case "2": //For a group of people.
+                case "2": // For a group of people.
                     cinema.EnterCinemaGroup(new Group());
                     break;
-                case "3": //Print ten times
+                case "3": // Print ten times
                     TenTimes.Print();
                     break;
-                case "4": //Split a string from input and print the third word
+                case "4": // Split a string from input and print the third word
                     Split.Input();
                     break;
-                default: //For invalid input.
+                default: // For invalid input.
                     Console.WriteLine("Invalid input. Try again.");
                     break;
             }

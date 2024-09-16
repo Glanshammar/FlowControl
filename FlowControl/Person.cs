@@ -1,4 +1,6 @@
-﻿public class Group
+﻿
+// Represents a group of people visiting the cinema.
+public class Group
 {
     private static List<Person> people = new List<Person>();
 
@@ -7,11 +9,13 @@
         AddToList();
     }
     
+    // Returns the list of people in the group.
     public List<Person> GetPeople()
     {
         return people;
     }
 
+    // Prompts for the number of people in the group and adds them to the list.
     private void AddToList()
     {
         int groupNumber;
@@ -35,6 +39,7 @@
     }
 }
 
+// Represents an individual person, either in a group or alone.
 public class Person
 {
     private int age { get; }
@@ -46,10 +51,12 @@ public class Person
         age = SetAge(person);
     }
 
+    // Prompts for and sets the age of the person.
     private int SetAge(int person)
     {
         while (true)
         {
+            // Adjust prompt based on whether it's a group or individual
             string prompt = isGroup ? $"What's the age of person {person}? " : "What's your age? ";
             Console.Write(prompt);
             string input = Console.ReadLine()?.Trim() ?? string.Empty;
@@ -69,6 +76,7 @@ public class Person
         }
     }
     
+    // Returns the age of the person.
     public int GetAge()
     {
         return age;
