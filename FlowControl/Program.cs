@@ -9,8 +9,8 @@ class Program
                           "\n0. Quit" +
                           "\n1. Enter the movies. (Single person)" +
                           "\n2. Enter the movies. (Group)" +
-                          "\n3. Print 10 times." +
-                          "\n4. Split sentence.");
+                          "\n3. Print the input 10 times." +
+                          "\n4. Prints the third word of the input.");
     }
     
     static void Main(string[] args)
