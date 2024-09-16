@@ -5,25 +5,30 @@ public class Split
     public static void Input()
     {
         Console.WriteLine("\nSplits a sentence and shows the third word.");
-        Console.Write("Write a sentence (at least 3 words): ");
-        
-        string input = Console.ReadLine() ?? string.Empty;
-        if (string.IsNullOrWhiteSpace(input))
-        {
-            Console.WriteLine("Input cannot be null. Please try again.");
-            return;
-        }
-        
-        string[] words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-        if (words.Length >= 3)
+        string input = string.Empty;
+        
+        do
         {
-            string thirdWord = words[2];
-            Console.WriteLine($"The third word is: {thirdWord}");
-        }
-        else
-        {
-            Console.WriteLine("The sentence must contain at least 3 words.");
-        }
+            Console.Write("Write a sentence (at least 3 words): ");
+            input = Console.ReadLine() ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Input cannot be null or empty. Please try again.");
+                continue;
+            }
+        
+            string[] words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            if (words.Length >= 3)
+            {
+                string thirdWord = words[2];
+                Console.WriteLine($"The third word is: {thirdWord}");
+            }
+            else
+            {
+                Console.WriteLine("The sentence must contain at least 3 words.");
+            }
+        } while (string.IsNullOrWhiteSpace(input));
     }
 }
