@@ -14,8 +14,19 @@
 
     private void AddToList()
     {
-        Console.Write("How many people are in the group? ");
-        int groupNumber = Convert.ToInt32(Console.ReadLine());
+        int groupNumber;
+        
+        while (true)
+        {
+            Console.Write("How many people are in the group? ");
+            string input = Console.ReadLine()?.Trim() ?? string.Empty;
+
+            if (int.TryParse(input, out groupNumber) && groupNumber > 0)
+            {
+                break;
+            }
+            Console.WriteLine("Invalid input. Please enter a positive number.");
+        }
         
         for (int i = 1; i <= groupNumber; i++)
         {
